@@ -60,5 +60,5 @@ public sealed class ReportService
     }
 
     private static string EscapeCsv(string value)
-        => """ + value.Replace(""", """") + """;
+        => "\"" + value.Replace("\"", "\"\"") + "\"";
 }
